@@ -6,19 +6,19 @@ import Story from '@/components/Story'
 
 function Stories() {
 
-    const [suggestions, setSuggestions] = useState([])
+    const [stories, setStories] = useState([])
 
     useEffect(() => {
-        const fetchedSuggestions = faker.helpers.multiple(fakeUser, {
+        const fetchedstories = faker.helpers.multiple(fakeUser, {
             count: 20,
         });
 
-        setSuggestions(fetchedSuggestions)
+        setStories(fetchedstories)
     }, [])
 
     return (
         <div className='flex space-x-2 p-6 bg-white mt-8 border border-gray-200 rounded-sm overflow-x-auto scrollbar-thin scrollbar-thumb-black'>
-            {suggestions.map(profile => (
+            {stories.map(profile => (
                 <Story key={profile.id} 
                     img={profile.avatar} 
                     username={profile.username}

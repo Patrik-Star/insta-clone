@@ -9,5 +9,6 @@ export function fakeUser() {
         password: faker.internet.password(),
         birthdate: faker.date.birthdate(),
         registeredAt: faker.date.past(),
+        company: faker.company.name()
     };
 }
